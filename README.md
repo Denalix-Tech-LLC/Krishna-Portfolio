@@ -51,10 +51,14 @@ There are two ways to edit it:
 > on the server — basic protection that is fine for a personal portfolio, but
 > don't reuse an important password here.
 
-**On static hosts (e.g. Vercel)** the server cannot write files, so **Save**
-will fail with a friendly message. Use the **Export JSON** button instead: it
-downloads your edited content as `site-content.json` — replace
-`content/site-content.json` in the repo with it, commit, and redeploy.
+**On static hosts (e.g. Vercel)** the server cannot write files. Two options:
+
+- **Recommended:** set the `GITHUB_TOKEN` / `GITHUB_REPO` environment variables
+  (see below) — then **Save** commits the JSON straight to your GitHub repo and
+  the host redeploys automatically (changes live in ~1 minute).
+- Or use the **Export JSON** button: it downloads your edited content as
+  `site-content.json` — replace `content/site-content.json` in the repo with
+  it, commit, and push.
 
 ### Option 2 — Edit the JSON by hand
 
@@ -107,11 +111,23 @@ types/content.ts        # TypeScript types for the content JSON
 2. Import it at [vercel.com/new](https://vercel.com/new) — Next.js is auto-detected.
 3. Add an environment variable `ADMIN_PASSWORD` in the Vercel project settings.
 
-> **Limitation on Vercel/static hosts:** the deployed filesystem is read-only,
-> so the admin **Save** button can't write `site-content.json` in production.
-> Workflow: edit on the deployed `/admin` page → **Export JSON** → replace
-> `content/site-content.json` in the repo → push (auto-redeploys).
-> Alternatively run `/admin` locally, Save, and push.
+> **Vercel's filesystem is read-only**, so by default the admin **Save** button
+> can't write `site-content.json` in production. To make Save work anyway,
+> connect it to GitHub:
+>
+> 1. Create a **fine-grained personal access token** at
+>    GitHub → Settings → Developer settings → Personal access tokens →
+>    Fine-grained tokens → *Generate new token*. Repository access: **only
+>    your portfolio repo**. Permissions: **Contents → Read and write**.
+> 2. In Vercel → Settings → Environments → Production, add:
+>    `GITHUB_TOKEN` (the token) and `GITHUB_REPO` (e.g. `you/krishna-portfolio`;
+>    add `GITHUB_BRANCH` only if your branch isn't `main`).
+> 3. Redeploy once. From then on, **Save** commits the content to GitHub and
+>    Vercel redeploys automatically — edits go live in about a minute.
+>
+> Without those variables, use **Export JSON** → replace
+> `content/site-content.json` in the repo → push (auto-redeploys), or run
+> `/admin` locally where Save writes the file directly.
 
 ### Self-hosted Node server (full admin save support)
 

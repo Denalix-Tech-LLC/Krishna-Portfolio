@@ -151,6 +151,7 @@ function Editor({
   dirty,
   saveState,
   saveError,
+  savedMessage,
   onChange,
   onSave,
   onExport,
@@ -160,6 +161,7 @@ function Editor({
   dirty: boolean;
   saveState: SaveState;
   saveError: string | null;
+  savedMessage: string | null;
   onChange: (next: SiteContent) => void;
   onSave: () => void;
   onExport: () => void;
@@ -171,7 +173,7 @@ function Editor({
     saveState === "saving"
       ? "Saving…"
       : saveState === "saved"
-        ? "Saved"
+        ? savedMessage ?? "Saved"
         : saveState === "error"
           ? saveError ?? "Save failed"
           : dirty
@@ -263,6 +265,7 @@ export default function AdminApp() {
   const [dirty, setDirty] = useState(false);
   const [saveState, setSaveState] = useState<SaveState>("idle");
   const [saveError, setSaveError] = useState<string | null>(null);
+  const [savedMessage, setSavedMessage] = useState<string | null>(null);
   // Session expired mid-edit: show a re-login overlay WITHOUT unmounting the
   // editor, so unsaved changes survive and can still be exported.
   const [reauth, setReauth] = useState(false);
@@ -346,6 +349,10 @@ export default function AdminApp() {
         body: JSON.stringify(content),
       });
       if (res.ok) {
+        const data = (await res.json().catch(() => null)) as {
+          message?: string;
+        } | null;
+        setSavedMessage(data?.message ?? null);
         setDirty(false);
         setSaveState("saved");
       } else if (res.status === 401) {
@@ -441,6 +448,7 @@ export default function AdminApp() {
           dirty={dirty}
           saveState={saveState}
           saveError={saveError}
+          savedMessage={savedMessage}
           onChange={handleChange}
           onSave={() => void handleSave()}
           onExport={handleExport}

@@ -16,7 +16,74 @@ import { isAuthed } from "@/lib/adminAuth";
 export const runtime = "nodejs";
 
 const READ_ONLY_ERROR =
-  "This host has a read-only filesystem (e.g. Vercel). Use Export JSON and replace content/site-content.json in the repo instead.";
+  "This host has a read-only filesystem (e.g. Vercel). Either set GITHUB_TOKEN + GITHUB_REPO env vars so Save commits to your repo, or use Export JSON and replace content/site-content.json manually.";
+
+const GITHUB_CONTENT_PATH = "content/site-content.json";
+
+/**
+ * Fallback for read-only hosts (Vercel): commit the content file to the
+ * GitHub repo via the Contents API. The connected host then redeploys with
+ * the new content automatically. Needs env vars:
+ *   GITHUB_TOKEN  — fine-grained PAT with Contents read/write on the repo
+ *   GITHUB_REPO   — "owner/repo"
+ *   GITHUB_BRANCH — optional, defaults to "main"
+ */
+async function saveToGitHub(
+  pretty: string
+): Promise<{ ok: true } | { ok: false; status: number; error: string }> {
+  const token = process.env.GITHUB_TOKEN;
+  const repo = process.env.GITHUB_REPO;
+  const branch = process.env.GITHUB_BRANCH || "main";
+  if (!token || !repo) {
+    return { ok: false, status: 500, error: READ_ONLY_ERROR };
+  }
+
+  const apiUrl = `https://api.github.com/repos/${repo}/contents/${GITHUB_CONTENT_PATH}`;
+  const headers = {
+    Authorization: `Bearer ${token}`,
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+    "User-Agent": "portfolio-admin-editor",
+  };
+
+  // The Contents API needs the current file SHA to update (absent = create).
+  let sha: string | undefined;
+  const getRes = await fetch(`${apiUrl}?ref=${encodeURIComponent(branch)}`, {
+    headers,
+    cache: "no-store",
+  });
+  if (getRes.ok) {
+    sha = ((await getRes.json()) as { sha?: string }).sha;
+  } else if (getRes.status !== 404) {
+    return {
+      ok: false,
+      status: 502,
+      error: `GitHub read failed (${getRes.status}) — check GITHUB_TOKEN permissions and GITHUB_REPO ("owner/repo")`,
+    };
+  }
+
+  const putRes = await fetch(apiUrl, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify({
+      message: "Update site content via admin editor",
+      content: Buffer.from(pretty, "utf-8").toString("base64"),
+      branch,
+      ...(sha ? { sha } : {}),
+    }),
+  });
+  if (!putRes.ok) {
+    const detail = (await putRes.json().catch(() => null)) as {
+      message?: string;
+    } | null;
+    return {
+      ok: false,
+      status: 502,
+      error: `GitHub save failed (${putRes.status}${detail?.message ? `: ${detail.message}` : ""})`,
+    };
+  }
+  return { ok: true };
+}
 
 /** Top-level keys that must exist for the payload to look like real site content. */
 const REQUIRED_KEYS = ["personal", "hero", "projects", "skills"] as const;
@@ -102,7 +169,17 @@ export async function POST(req: NextRequest) {
   } catch (err) {
     const code = (err as NodeJS.ErrnoException | null)?.code;
     if (code === "EROFS" || code === "EACCES" || code === "EPERM") {
-      return NextResponse.json({ error: READ_ONLY_ERROR }, { status: 500 });
+      // Read-only host (e.g. Vercel) — fall back to committing via GitHub.
+      const gh = await saveToGitHub(`${pretty}\n`);
+      if (gh.ok) {
+        return NextResponse.json({
+          ok: true,
+          mode: "github",
+          message:
+            "Saved to GitHub — the host is redeploying; changes go live in a minute or two.",
+        });
+      }
+      return NextResponse.json({ error: gh.error }, { status: gh.status });
     }
     return NextResponse.json(
       { error: "Failed to write content file on the server" },
@@ -110,5 +187,5 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({ ok: true, mode: "file" });
 }
