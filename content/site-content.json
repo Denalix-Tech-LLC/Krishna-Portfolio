@@ -1,0 +1,600 @@
+{
+  "_README": "EVERY piece of text on the site lives in this file. Edit it here (or via the /admin page) and the site updates — no code changes needed. Keys starting with an underscore are documentation and are ignored by the site.",
+  "_TIP": "Keep the structure (field names) exactly as-is; only change the values. See content/SCHEMA.md for a field-by-field guide.",
+  "meta": {
+    "_comment": "Browser tab title, search-engine description and social-share (Open Graph) text.",
+    "siteTitle": "Krishna Reddy Kypu | Senior Mechanical Engineer — NPD",
+    "description": "Portfolio of Krishna Reddy Kypu, Senior Mechanical Engineer with 12 years of experience in New Product Design & Development across defense, aerospace and semiconductor capital equipment.",
+    "keywords": [
+      "Mechanical Engineer",
+      "New Product Development",
+      "NPD",
+      "Electro-mechanical Systems",
+      "Semiconductor Equipment",
+      "Defense and Aerospace",
+      "FEA",
+      "GD&T",
+      "Unigraphics NX",
+      "Bangalore"
+    ],
+    "siteUrl": "https://krishna-reddy-kypu.vercel.app",
+    "ogTitle": "Krishna Reddy Kypu — Senior Mechanical Engineer",
+    "ogDescription": "12 years designing electro-mechanical systems: missile seekers, EUV lithography tools and semiconductor PVD platforms."
+  },
+  "nav": {
+    "_comment": "Top navigation bar. 'logoText' + 'logoAccent' render side by side (accent is orange).",
+    "logoText": "Krishna Reddy",
+    "logoAccent": ".Kypu",
+    "resumeLabel": "Resume",
+    "links": [
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Experience",
+        "href": "#experience"
+      },
+      {
+        "label": "Projects",
+        "href": "#projects"
+      },
+      {
+        "label": "Skills",
+        "href": "#skills"
+      },
+      {
+        "label": "Credentials",
+        "href": "#credentials"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ]
+  },
+  "personal": {
+    "_comment": "Core identity used across the site (hero, contact, footer, resume button).",
+    "name": "Krishna Reddy Kypu",
+    "title": "Senior Mechanical Engineer",
+    "subtitle": "New Product Design & Development • 12 Years Experience",
+    "location": "Bangalore, India",
+    "email": "Krishnareddykypu@gmail.com",
+    "phone": "+91 94945 05314",
+    "linkedin": "https://www.linkedin.com/in/krishna-reddy-kypu93/",
+    "resumeUrl": "/Krishna-Reddy-Kypu-Resume.pdf"
+  },
+  "hero": {
+    "_comment": "Full-screen opening section with the 3D gearbox scene.",
+    "greeting": "Hello, I am",
+    "headlineLead": "I design and deliver",
+    "headlineAccent": "electro-mechanical systems",
+    "intro": "From missile seeker gimbals to EUV lithography tools and semiconductor PVD platforms — I take products from requirement specs to validated hardware.",
+    "ctaPrimary": "View Projects",
+    "ctaSecondary": "Download Resume",
+    "badges": [
+      "Defense & Aerospace",
+      "Semiconductor Capital Equipment",
+      "End-to-End NPD"
+    ],
+    "scrollHint": "Scroll to explore"
+  },
+  "about": {
+    "_comment": "Bio paragraphs, animated stat counters and quick highlight chips.",
+    "eyebrow": "About Me",
+    "heading": "Engineering products from first sketch to final test",
+    "bio": [
+      "I am a goal-oriented Mechanical Engineer with 12 years of experience in design and development of new products and systems. My career spans two demanding industries: defense & aerospace, where I developed electro-mechanical missile seeker and surveillance systems, and semiconductor capital equipment, where I design wafer-processing platforms.",
+      "Currently a Staff Engineer / Technical Manager at Applied Materials in Bangalore, I lead modules for new PVD platform development — owning subsystems from requirement specification through design, analysis, prototyping and product validation, while mentoring young engineers along the way.",
+      "I believe in deep visualization, creative thinking and disciplined engineering: DFMA and lean design, value engineering, GD&T and tolerance stack-up, structural and thermal FEA, and rigorous risk management. Passionate about innovation — I love taking an idea and turning it into hardware that works."
+    ],
+    "photo": "/krishna-photo.jpg",
+    "photoAlt": "Portrait of Krishna Reddy Kypu, Senior Mechanical Engineer",
+    "stats": [
+      {
+        "value": 12,
+        "suffix": "+",
+        "label": "Years of Experience"
+      },
+      {
+        "value": 15,
+        "suffix": "+",
+        "label": "Products & Systems Delivered"
+      },
+      {
+        "value": 3,
+        "suffix": "",
+        "label": "Industries Mastered"
+      },
+      {
+        "value": 3,
+        "suffix": "",
+        "label": "Professional Certifications"
+      }
+    ],
+    "highlights": [
+      "End-to-end product life cycle (PDR process)",
+      "Electro-mechanical systems design",
+      "DFMA & lean design",
+      "Value engineering",
+      "GD&T & stack-up analysis",
+      "Structural & thermal FEA",
+      "Cross-functional team leadership"
+    ]
+  },
+  "experience": {
+    "_comment": "Vertical timeline. Items appear top-down, most recent first. Add/remove/reorder freely.",
+    "eyebrow": "Career Path",
+    "heading": "Experience Timeline",
+    "subheading": "12 years across defense, aerospace and semiconductor capital equipment.",
+    "items": [
+      {
+        "id": "applied-materials",
+        "role": "Staff Engineer / Technical Manager",
+        "company": "Applied Materials",
+        "location": "Bangalore, India",
+        "period": "June 2022 — Present",
+        "industry": "Semiconductor Capital Equipment — NPD",
+        "summary": "Module lead for multiple subsystems on a new platform for semi-critical PVD and adjacent applications.",
+        "highlights": [
+          "Design & validation of subsystems from scratch — MRS to product validation through the PDP process",
+          "System & module pump-down calculations, pump sizing and vac-vent design",
+          "Electro-mechanical and vacuum interface design across the platform",
+          "Leading project execution with cross-functional collaboration and mentoring new engineers"
+        ],
+        "tools": [
+          "Unigraphics NX",
+          "NX Nastran",
+          "ANSYS",
+          "VacTran",
+          "Macro Flow",
+          "Office 365"
+        ]
+      },
+      {
+        "id": "lam-research",
+        "role": "Mechanical Engineer II",
+        "company": "Lam Research Corporation",
+        "location": "Bangalore, India",
+        "period": "August 2020 — June 2022",
+        "industry": "Semiconductor Capital Equipment",
+        "summary": "Mechanical design for a dry photoresist deposition tool enabling EUV lithography.",
+        "highlights": [
+          "Concept development & selection for components and subsystems using Pugh trade-off matrix",
+          "Design of high-purity gas weldments & manifolds per P&ID for the Vapor Delivery System (VDS)",
+          "Cable harness design for optical and electrical cables per interconnect diagram",
+          "Tolerance analysis (WCS & RSS) with GD&T per ASME Y14.5; DFM/DFA-driven part-count and cost reduction",
+          "Conducted PDR, DDR and CDR design reviews; led project activities for the India team"
+        ],
+        "tools": [
+          "Unigraphics NX",
+          "NX Nastran",
+          "Macro Flow",
+          "MIT Calc",
+          "Office 365"
+        ]
+      },
+      {
+        "id": "vem-technologies",
+        "role": "Mechanical Engineer",
+        "company": "VEM Technologies Pvt. Ltd.",
+        "location": "Hyderabad, India",
+        "period": "October 2014 — August 2020",
+        "industry": "Defense & Aerospace",
+        "summary": "R&D design of electro-mechanical systems: RF seeker, MBK and AESA TR module.",
+        "highlights": [
+          "System architecture development, decomposition and integration planning with CFT reviews",
+          "Torque calculations & dynamic balancing of gimbal systems; actuator sizing and gearbox design per AGMA & DIN",
+          "Thermal design of RF seeker electronics and TR module; packaging of RF & DSP electronics",
+          "Design validation in ANSYS — structural, modal, thermal and random vibration per MIL-STD-810G / 461E",
+          "Fixtures for bench, functional and brazing processes; testing in anechoic chamber and MIL environmental tests",
+          "Product documentation to AS9100-D: D&D plans, BOMs, assembly & acceptance test procedures in SAP"
+        ],
+        "tools": [
+          "Unigraphics NX",
+          "ANSYS",
+          "KISSsoft",
+          "AutoCAD",
+          "SAP",
+          "MS Office"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "_comment": "Project cards shown in a grid; clicking a card opens a detail modal. 'image' can be a path like /projects/my-image.jpg placed in the public folder — leave empty (\"\") for a stylized placeholder graphic.",
+    "eyebrow": "Selected Work",
+    "heading": "Featured Projects",
+    "subheading": "Products and systems I have designed, analyzed and delivered.",
+    "cardCtaLabel": "View details",
+    "modalDetailsLabel": "Key Contributions",
+    "modalToolsLabel": "Tools & Software",
+    "items": [
+      {
+        "id": "pvd-platform",
+        "title": "Semi-Critical PVD Platform",
+        "subtitle": "New platform design for PVD & adjacent applications",
+        "company": "Applied Materials",
+        "description": "Ground-up design of subsystems for a new semiconductor PVD platform — from Market Requirement Specification to validated product through the PDP process.",
+        "details": [
+          "Module lead for multiple subsystems with full ownership from MRS (Market Requirement Specification) to product validation through the PDP process",
+          "System and module pump-down calculations, pump sizing and vac-vent design for the vacuum architecture",
+          "Electro-mechanical and vacuum interface design across the platform and adjacent applications",
+          "Component and subsystem design per functional requirements considering SEMI standards (S2, S8, S1, S6)",
+          "Concept development, ideation and selection using the Pugh trade-off matrix",
+          "BOM creation and configuration with product documentation per internal standards",
+          "Engineering change management — ECN/ECR (DDC, ECO and CA) for design changes",
+          "Risk management with DFMEA, Pareto charts and RCA across subsystems",
+          "Cross-functional collaboration with mechatronics, control systems, electronics, manufacturing, planning and purchase teams",
+          "Leading the team for project execution and mentoring new engineers"
+        ],
+        "tools": [
+          "Unigraphics NX",
+          "VacTran",
+          "ANSYS",
+          "NX Nastran"
+        ],
+        "tags": [
+          "CAD",
+          "Vacuum Systems",
+          "NPD",
+          "SEMI Standards"
+        ],
+        "image": "",
+        "imageAlt": "Semiconductor PVD platform subsystem design"
+      },
+      {
+        "id": "euv-deposition-tool",
+        "title": "Dry Photoresist Deposition Tool",
+        "subtitle": "Enabling EUV lithography",
+        "company": "Lam Research",
+        "description": "Mechanical design for a dry photoresist deposition tool for EUV lithography — high-purity gas delivery, precision hardware and cost-optimized subsystems.",
+        "details": [
+          "Concept development and selection for components and subsystems per specifications using the Pugh trade-off matrix",
+          "Design of high-purity gas weldments and manifolds per P&ID for the Vapor Delivery System (VDS)",
+          "Cable harness design for optical and other cables per the interconnect diagram",
+          "Sheet-metal brackets and machined parts designed in NX with structural FEA in NX Nastran",
+          "Detailed design per DFX principles (DFM, DFA, DFC) — reduced part count, assembly time and machining cost",
+          "Execution and resolution of Problem Reports (PR) as technical owner",
+          "Conducted PDR, DDR and CDR design reviews; prepared and presented test plans for lab fit and function checks",
+          "Tolerance analysis (WCS & RSS) with GD&T applied per ASME Y14.5 to meet specifications",
+          "ECN/ECR (ECO and DDC) creation for implementing component and assembly changes",
+          "Risk management and mitigation plans presented in CFT forums using FMEA and Pareto charts",
+          "Led project activities for the India team and initiated internal knowledge-sharing sessions on the product and subsystems"
+        ],
+        "tools": [
+          "Unigraphics NX",
+          "NX Nastran",
+          "Macro Flow",
+          "MIT Calc"
+        ],
+        "tags": [
+          "CAD",
+          "FEA",
+          "DFM",
+          "Semiconductor"
+        ],
+        "image": "",
+        "imageAlt": "Dry photoresist deposition tool for EUV lithography"
+      },
+      {
+        "id": "rf-seeker-gimbal",
+        "title": "RF Seeker Gimbal System",
+        "subtitle": "Missile seeker electro-mechanical system",
+        "company": "VEM Technologies",
+        "description": "Design and development of a two-axis RF seeker gimbal — torque derivation, dynamic balancing, actuator & gearbox design, and full MIL-standard validation.",
+        "details": [
+          "Requirements review through cross-functional team discussion and alignment",
+          "System architecture development, decomposition and integration plan creation and execution",
+          "Multiple concept generation with selection via Pugh matrix; reviews with authorities and customers to finalize concepts",
+          "Torque calculations for gimbals and dynamic balancing of the system to reduce torque requirements",
+          "Actuator sizing and gearbox design per AGMA & DIN standards in KISSsoft, including interface design",
+          "Fixture design for actuator load testing and backlash measurement, plus bench, functional and brazing process fixtures",
+          "Design calculations and selection of bearings, O-rings and feedback sensors (encoder, gyro) per functional and environmental requirements",
+          "Thermal design of the RF seeker system electronics",
+          "Design validation in ANSYS — structural, modal, thermal and random vibration per MIL-STD-810G / 461E",
+          "Drafting in NX and AutoCAD to IS 10714 / ASME Y14 with GD&T per ASME Y14.5M; stack-up analysis on critical assemblies",
+          "Product documentation per AS9100-D — D&D plans, BOMs, assembly procedures, acceptance and quality test plans, purchase indents in SAP",
+          "Design huddles plus detailed, critical and final design reviews with documentation release through the PDR process",
+          "Assembly and test plans; module, subsystem and system-level integration testing including anechoic chamber and MIL environmental tests",
+          "Failure analysis with RCA tools (fishbone, 5-why); risk management using DFMEA and Pareto charts",
+          "Manufacturing follow-up supporting the shop floor team; team leadership and mentoring of new engineers"
+        ],
+        "tools": [
+          "Unigraphics NX",
+          "ANSYS",
+          "KISSsoft",
+          "AutoCAD"
+        ],
+        "tags": [
+          "CAD",
+          "FEA",
+          "Defense",
+          "Gear Design"
+        ],
+        "image": "",
+        "imageAlt": "RF seeker gimbal assembly design"
+      },
+      {
+        "id": "aesa-tr-module",
+        "title": "AESA TR Module & MBK Packaging",
+        "subtitle": "RF & DSP electronics packaging",
+        "company": "VEM Technologies",
+        "description": "Electronics packaging and thermal design for AESA transmit-receive modules and MBK — EMI/EMC-aware layouts, cable harness routing and MIL-grade environmental survival.",
+        "details": [
+          "Thermal design and analysis of the AESA TR module and MBK electronics",
+          "Packaging of RF & DSP electronics based on electrical design inputs, in coordination with the PCB design team",
+          "PCB thermal analysis and cable routing (harness) with EMI/EMC and environmental considerations per MIL standards",
+          "Packaging of high-voltage electronics up to 10 kV",
+          "Concept generation and selection with design reviews through the PDR process",
+          "Design validation in ANSYS — structural, modal, thermal and random vibration",
+          "Test setup development and test-facility identification, including anechoic chamber and MIL environmental testing",
+          "Product documentation per AS9100-D with ECN/ECR for design changes"
+        ],
+        "tools": [
+          "Unigraphics NX",
+          "ANSYS",
+          "AutoCAD"
+        ],
+        "tags": [
+          "Thermal",
+          "Electronics Packaging",
+          "Defense",
+          "EMI/EMC"
+        ],
+        "image": "",
+        "imageAlt": "AESA TR module electronics packaging"
+      },
+      {
+        "id": "vds-gas-delivery",
+        "title": "Vapor Delivery System (VDS)",
+        "subtitle": "High-purity gas delivery hardware",
+        "company": "Lam Research",
+        "description": "Precision high-purity gas delivery hardware — weldments, manifolds and flow paths engineered to P&ID requirements with rigorous tolerance control.",
+        "details": [
+          "High-purity gas weldment and manifold design per P&ID requirements for the vapor delivery system",
+          "Tolerance stack-up analysis (WCS & RSS) on critical sealing interfaces",
+          "GD&T application per ASME Y14.5M to meet functional specifications",
+          "Flow verification with Macro Flow and engineering calculations in MIT Calc",
+          "Materials, surface finishes and bought-out (COTS) component selection per functional and environmental requirements",
+          "Execution and resolution of Problem Reports (PR) as technical owner",
+          "Risk mitigation via DFMEA and Pareto analysis presented in CFT forums",
+          "Design reviews (PDR, DDR, CDR) with test plans for lab fit and function checks"
+        ],
+        "tools": [
+          "Unigraphics NX",
+          "Macro Flow",
+          "MIT Calc"
+        ],
+        "tags": [
+          "CAD",
+          "Manufacturing",
+          "GD&T",
+          "Semiconductor"
+        ],
+        "image": "",
+        "imageAlt": "High-purity vapor delivery system manifold"
+      },
+      {
+        "id": "mono-wheel-bike",
+        "title": "Mono Wheel Electric Bike",
+        "subtitle": "Single-wheel electric vehicle — project lead",
+        "company": "Academic — JNTU Kakinada",
+        "description": "Designed and fabricated a one-wheeled electric vehicle driven by a geared electric actuator — from concept generation through procurement, build and road testing.",
+        "details": [
+          "One-wheeled, single-track vehicle similar to a unicycle — designed and fabricated end to end",
+          "Wheel driven by a geared electric actuator powered by batteries",
+          "Power transmission through an internal gear mechanism — module 3, gear ratio of 3",
+          "Top speed of 25 km/h with electro-mechanical brakes to stop the vehicle",
+          "As project lead: concept generation, design calculations, procurement of materials and bought-outs, project execution and testing"
+        ],
+        "tools": [
+          "CAD",
+          "Design Calculations",
+          "Fabrication"
+        ],
+        "tags": [
+          "Prototype",
+          "Manufacturing",
+          "EV",
+          "Project Lead"
+        ],
+        "image": "/projects/mono-wheel-bike.jpg",
+        "imageAlt": "Krishna riding the mono wheel electric bike prototype"
+      }
+    ]
+  },
+  "skills": {
+    "_comment": "Skill groups with 0-100 proficiency levels rendered as animated indicators.",
+    "eyebrow": "Capabilities",
+    "heading": "Skills & Tools",
+    "subheading": "The toolbox built over 12 years of shipping real hardware.",
+    "groups": [
+      {
+        "id": "design",
+        "name": "Design & CAD",
+        "skills": [
+          {
+            "name": "Unigraphics NX (Modeling, Assembly, Sheet Metal, Routing)",
+            "level": 95
+          },
+          {
+            "name": "AutoCAD (ASME / IS Drafting)",
+            "level": 85
+          },
+          {
+            "name": "Electronics Packaging & Cable Harness",
+            "level": 90
+          },
+          {
+            "name": "Sheet Metal & Plastic Part Design",
+            "level": 88
+          }
+        ]
+      },
+      {
+        "id": "analysis",
+        "name": "Analysis & Simulation",
+        "skills": [
+          {
+            "name": "ANSYS (Structural, Thermal, Modal, Random Vibration)",
+            "level": 90
+          },
+          {
+            "name": "Siemens NX Nastran (Structural FEA)",
+            "level": 85
+          },
+          {
+            "name": "ANSYS Maxwell (EDT)",
+            "level": 78
+          },
+          {
+            "name": "FEMM (Magnetics)",
+            "level": 75
+          },
+          {
+            "name": "MATLAB",
+            "level": 78
+          },
+          {
+            "name": "KISSsoft (Planetary Gear Trains — DIN/AGMA)",
+            "level": 85
+          },
+          {
+            "name": "VacTran (Vacuum) & Macro Flow",
+            "level": 82
+          }
+        ]
+      },
+      {
+        "id": "manufacturing",
+        "name": "Manufacturing & Quality",
+        "skills": [
+          {
+            "name": "GD&T per ASME Y14.5M",
+            "level": 92
+          },
+          {
+            "name": "Tolerance Stack-up (WCS & RSS)",
+            "level": 90
+          },
+          {
+            "name": "DFM / DFA / DFX & Value Engineering",
+            "level": 90
+          },
+          {
+            "name": "CNC Machining, EDM, Injection Molding, Welding",
+            "level": 85
+          }
+        ]
+      },
+      {
+        "id": "plm",
+        "name": "PLM & Documentation",
+        "skills": [
+          {
+            "name": "Teamcenter",
+            "level": 85
+          },
+          {
+            "name": "ENOVIA iPLM",
+            "level": 82
+          },
+          {
+            "name": "SAP",
+            "level": 80
+          },
+          {
+            "name": "AS9100-D Documentation & ECN/ECR",
+            "level": 88
+          }
+        ]
+      },
+      {
+        "id": "management",
+        "name": "Management & Methods",
+        "skills": [
+          {
+            "name": "Project & Cross-functional Team Management",
+            "level": 90
+          },
+          {
+            "name": "DFMEA, RCA/RCCA & Pareto Analysis",
+            "level": 92
+          },
+          {
+            "name": "Pugh Matrix, TRIZ & Guided Brainstorming",
+            "level": 85
+          },
+          {
+            "name": "Systems Engineering",
+            "level": 85
+          }
+        ]
+      }
+    ]
+  },
+  "certifications": {
+    "_comment": "Professional certifications list.",
+    "eyebrow": "Credentials",
+    "heading": "Certifications",
+    "items": [
+      {
+        "id": "semi-s2",
+        "name": "Introduction to SEMI S2",
+        "issuer": "SALUS Engineering"
+      },
+      {
+        "id": "leap-l1",
+        "name": "LEAP L1 Certification",
+        "issuer": "Lam Research"
+      },
+      {
+        "id": "sys-eng",
+        "name": "Systems Engineering Certification Course",
+        "issuer": "Professional Certification"
+      }
+    ]
+  },
+  "education": {
+    "heading": "Education",
+    "items": [
+      {
+        "id": "btech",
+        "degree": "B.Tech — Mechanical Engineering",
+        "institution": "JNTU Kakinada",
+        "period": "2010 — 2014",
+        "detail": "Graduated with 80% — led the Mono Wheel Bike design-and-build project."
+      },
+      {
+        "id": "intermediate",
+        "degree": "Intermediate (12th)",
+        "institution": "Sri Chaitanya Junior College",
+        "period": "2008 — 2010",
+        "detail": "Scored 94.5%."
+      }
+    ]
+  },
+  "achievements": {
+    "heading": "Achievements",
+    "items": [
+      "Employee of the Quarter Award",
+      "Above & Beyond Cheers Award — for project ownership, accountability and innovation",
+      "Best Performer appreciation from top management"
+    ]
+  },
+  "contact": {
+    "_comment": "Contact section: intro plus direct-contact cards (email, LinkedIn, phone). Email and phone get one-click copy buttons.",
+    "eyebrow": "Get In Touch",
+    "heading": "Let's build something together",
+    "subheading": "Open to techno-managerial roles in mechanical NPD.",
+    "intro": "Whether it's a new product challenge, a consulting question or just a hello — my inbox is always open.",
+    "emailLabel": "Email",
+    "linkedinLabel": "LinkedIn",
+    "phoneLabel": "Phone"
+  },
+  "footer": {
+    "text": "Designed with an engineer's eye for detail.",
+    "builtWith": "Built with Next.js, Three.js & Framer Motion"
+  }
+}
