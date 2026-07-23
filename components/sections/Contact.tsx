@@ -84,9 +84,7 @@ export default function Contact({ content, personal }: ContactProps) {
     },
     {
       label: content.linkedinLabel,
-      value: personal.linkedin
-        .replace(/^https?:\/\/(www\.)?/, "")
-        .replace(/\/$/, ""),
+      value: content.linkedinText,
       href: personal.linkedin,
       external: true,
       tone: "steel",
@@ -166,8 +164,17 @@ export default function Contact({ content, personal }: ContactProps) {
                       <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
                         {item.label}
                       </span>
-                      <span className="mt-1 block truncate text-sm font-medium text-white transition-colors group-hover:text-steel-200">
+                      <span className="mt-1 flex items-center gap-1.5 truncate text-sm font-medium text-white transition-colors group-hover:text-steel-200">
                         {item.value}
+                        {item.external ? (
+                          <svg
+                            {...iconProps}
+                            strokeWidth={2}
+                            className="h-3.5 w-3.5 shrink-0 text-slate-500 transition-colors group-hover:text-steel-300"
+                          >
+                            <path d="M7 17 17 7M8 7h9v9" />
+                          </svg>
+                        ) : null}
                       </span>
                     </span>
                   </a>

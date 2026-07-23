@@ -492,6 +492,7 @@ export function ContactFooterEditor({ content, onChange }: SectionEditorProps) {
         <Grid2>
           <TextField label="Email label" value={contact.emailLabel} onChange={(v) => setContact({ emailLabel: v })} />
           <TextField label="LinkedIn label" value={contact.linkedinLabel} onChange={(v) => setContact({ linkedinLabel: v })} />
+          <TextField label="LinkedIn display text" value={contact.linkedinText} onChange={(v) => setContact({ linkedinText: v })} />
           <TextField label="Phone label" value={contact.phoneLabel} onChange={(v) => setContact({ phoneLabel: v })} />
         </Grid2>
       </Panel>

@@ -161,6 +161,8 @@ export interface ContactContent {
   intro: string;
   emailLabel: string;
   linkedinLabel: string;
+  /** Friendly text shown on the LinkedIn card instead of the raw profile URL. */
+  linkedinText: string;
   phoneLabel: string;
 }
 
