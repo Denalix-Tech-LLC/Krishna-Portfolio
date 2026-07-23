@@ -3,8 +3,8 @@
   "_TIP": "Keep the structure (field names) exactly as-is; only change the values. See content/SCHEMA.md for a field-by-field guide.",
   "meta": {
     "_comment": "Browser tab title, search-engine description and social-share (Open Graph) text.",
-    "siteTitle": "Krishna Reddy Kypu | Senior Mechanical Engineer — NPD",
-    "description": "Portfolio of Krishna Reddy Kypu, Senior Mechanical Engineer with 12 years of experience in New Product Design & Development across defense, aerospace and semiconductor capital equipment.",
+    "siteTitle": "Krishna Reddy Kypu | Staff Engineer — NPD",
+    "description": "Portfolio of Krishna Reddy Kypu, Staff Mechanical Engineer with 12 years of experience in New Product Design & Development across defense, aerospace and semiconductor capital equipment.",
     "keywords": [
       "Mechanical Engineer",
       "New Product Development",
@@ -18,8 +18,8 @@
       "Bangalore"
     ],
     "siteUrl": "https://krishna-reddy-kypu.vercel.app",
-    "ogTitle": "Krishna Reddy Kypu — Senior Mechanical Engineer",
-    "ogDescription": "12 years designing electro-mechanical systems: missile seekers, EUV lithography tools and semiconductor PVD platforms."
+    "ogTitle": "Krishna Reddy Kypu — Staff Engineer-Mechanical ",
+    "ogDescription": "12 years designing electro-mechanical systems: missile seekers, and semiconductor PVD platforms,Vacuum chambers, Main frame & Tool architecture Design"
   },
   "nav": {
     "_comment": "Top navigation bar. 'logoText' + 'logoAccent' render side by side (accent is orange).",
@@ -56,7 +56,7 @@
   "personal": {
     "_comment": "Core identity used across the site (hero, contact, footer, resume button).",
     "name": "Krishna Reddy Kypu",
-    "title": "Senior Mechanical Engineer",
+    "title": "Staff Engineer-Mechanical ",
     "subtitle": "New Product Design & Development • 12 Years Experience",
     "location": "Bangalore, India",
     "email": "Krishnareddykypu@gmail.com",
